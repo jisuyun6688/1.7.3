@@ -11,5 +11,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Unzip /v2board-1.7.3.zip
-      run: unzip /v2board-1.7.3.zip -d .
+
+    - name: Install unzip
+      run: sudo apt-get install unzip  # 安装 unzip 工具（如果必要）
+
+    - name: Unzip v2board-1.7.3.zip
+      run: unzip v2board-1.7.3.zip -d .
