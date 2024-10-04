@@ -1,0 +1,17 @@
+name: Unzip v2board
+
+on:
+  push:
+    branches:
+      - main  # 确保使用正确的分支名称，如果是其他分支，替换为对应的分支名
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2  # 获取当前仓库的所有文件
+
+    - name: Unzip v2board-1.7.3.zip
+      run: unzip v2board-1.7.3.zip -d .
