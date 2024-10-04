@@ -11,9 +11,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-
-    - name: Install unzip
-      run: sudo apt-get install unzip  # 安装 unzip 工具（如果必要）
-
     - name: Unzip v2board-1.7.3.zip
       run: unzip v2board-1.7.3.zip -d .
+
+    - name: List files in the root directory
+      run: ls -al  # 列出根目录下的所有文件以确认解压结果
+
+    - name: Print current working directory
+      run: pwd  # 打印当前工作目录
