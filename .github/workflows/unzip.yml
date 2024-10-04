@@ -11,5 +11,5 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Unzip v2board-1.7.3.zip
-      run: unzip v2board-1.7.3.zip -d .
+    - name: Unzip /v2board-1.7.3.zip
+      run: unzip /v2board-1.7.3.zip -d .
