@@ -11,8 +11,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: List contents of the zip file
+      run: unzip -l v2board-1.7.3.zip  # 列出压缩包内的文件
+
     - name: Unzip v2board-1.7.3.zip
-      run: unzip v2board-1.7.3.zip -d .
+      run: unzip v2board-1.7.3.zip -d ./  # 解压到当前目录
 
     - name: List files in the root directory
       run: ls -al  # 列出根目录下的所有文件以确认解压结果
